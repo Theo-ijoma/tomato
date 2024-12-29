@@ -7,7 +7,7 @@ import "dotenv/config"
 import cartRouter from './routes/cartRoute.js';
 import orderRouter from './routes/orderRoute.js';
 
-dotenv.config(); // Load environment variables
+
 
 // Allow requests only from the frontend domain
 const corsOptions = {
