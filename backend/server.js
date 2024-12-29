@@ -7,13 +7,26 @@ import "dotenv/config"
 import cartRouter from './routes/cartRoute.js';
 import orderRouter from './routes/orderRoute.js';
 
+dotenv.config(); // Load environment variables
+
+const app = express();
+
+// Allow requests only from the frontend domain
+const corsOptions = {
+    origin: 'https://tomatoo-rho.vercel.app',  // Replace with your frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true, // If you're using cookies or JWT
+};
+
+// Apply CORS middleware with the specified options
+app.use(cors(corsOptions));
 // app config
 const app = express();
 const port = process.env.PORT || 4000;
 
 // middleware
 app.use(express.json());
-app.use(cors());
 
 // db connection
 connectDB();
