@@ -9,8 +9,6 @@ import orderRouter from './routes/orderRoute.js';
 
 dotenv.config(); // Load environment variables
 
-const app = express();
-
 // Allow requests only from the frontend domain
 const corsOptions = {
     origin: 'https://tomatoo-rho.vercel.app',  // Replace with your frontend URL
