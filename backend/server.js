@@ -9,9 +9,14 @@ import orderRouter from './routes/orderRoute.js';
 
 
 
+
+// app config
+const app = express();
+const port = process.env.PORT || 4000;
+
 // Allow requests only from the frontend domain
 const corsOptions = {
-    origin: 'https://tomatoo-rho.vercel.app',  // Replace with your frontend URL
+    origin: 'https://tomato-frontend-8gdu.onrender.com',  // Replace with your frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true, // If you're using cookies or JWT
@@ -19,9 +24,6 @@ const corsOptions = {
 
 // Apply CORS middleware with the specified options
 app.use(cors(corsOptions));
-// app config
-const app = express();
-const port = process.env.PORT || 4000;
 
 // middleware
 app.use(express.json());
