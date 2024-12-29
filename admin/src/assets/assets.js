@@ -14,4 +14,4 @@ export const assets ={
     parcel_icon
 }
 
-export const url = 'https://tomato-blush.vercel.app'
+export const url = 'https://tomato-backend-y6kz.onrender.com'
