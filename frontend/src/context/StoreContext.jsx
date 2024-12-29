@@ -7,7 +7,7 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
 
   const [cartItems, setCartItems] = useState({});
-  const url = "https://tomato-backend-y6kz.onrender.com";
+  const url = "https://tomato-blush.vercel.app";
   const [token, setToken] = useState("");
 
   // recieve food from database
