@@ -18,12 +18,13 @@ const port = process.env.PORT || 4000;
 const corsOptions = {
     origin: [
         'https://tomato-frontend-8gdu.onrender.com', 
-        'https://tomato-admin-35hw.onrender.com'  // No trailing slash
-    ],  
+        'https://tomato-admin-35hw.onrender.com'
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true, // If you're using cookies or JWT
+    allowedHeaders: ['Content-Type', 'Authorization', 'token'],  // Add 'token' here
+    credentials: true,  // If you're using cookies or JWT
 };
+
 
 
 // Apply CORS middleware with the specified options
