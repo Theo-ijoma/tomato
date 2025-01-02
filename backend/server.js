@@ -16,11 +16,15 @@ const port = process.env.PORT || 4000;
 
 // Allow requests only from the frontend domain
 const corsOptions = {
-    origin: ['https://tomato-frontend-8gdu.onrender.com', 'https://tomato-admin-35hw.onrender.com/'],  // Replace with your frontend URL
+    origin: [
+        'https://tomato-frontend-8gdu.onrender.com', 
+        'https://tomato-admin-35hw.onrender.com'  // No trailing slash
+    ],  
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true, // If you're using cookies or JWT
 };
+
 
 // Apply CORS middleware with the specified options
 app.use(cors(corsOptions));
