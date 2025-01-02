@@ -14,7 +14,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import {Routes, Route} from 'react-router-dom'
 const App = () => {
-  const url = "http://localhost:4000"
+  const url = "https://tomato-backend-y6kz.onrender.com"
   return (
     <div>
       <ToastContainer />
